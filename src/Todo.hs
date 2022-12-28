@@ -61,7 +61,7 @@ todoApproved words [] ( Just ( T.TodoItem _ _ todoWords _ ) ) =
 
 todoApproved [] tags ( Just ( T.TodoItem _ _ _ todoTags ) ) =
   coerce $
-  flip all tags $
+  flip all tags $ 
   \( T.Tag tag ) -> 
   flip any todoTags $
   \( T.Tag todoTag ) -> tag `isSubOf` todoTag
